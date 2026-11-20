@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: seatiq-demo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: BREAK_MINUTES
+        value: "20"
+      - key: SEATIQ_DB
+        value: /tmp/seatiq.sqlite3
+
