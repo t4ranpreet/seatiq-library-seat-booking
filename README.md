@@ -33,6 +33,18 @@ Open <http://127.0.0.1:8000>. The API reference is at <http://127.0.0.1:8000/doc
 
 The backend serves the included React UI from `frontend/`. The UI loads React, ReactDOM, a QR image generator, and display fonts from public CDNs; an internet connection is needed for those assets. API calls and demo data remain local.
 
+## Checks
+
+GitHub Actions runs the API lifecycle tests on pushes and pull requests. To run them locally after dependencies are installed:
+
+```bash
+cd backend
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+```
+
+The suite covers seed counts, duplicate reservation conflicts, check-in, break/return, automatic expiry, admin access, reset, and sign-out.
+
 ## API overview
 
 | Method | Path | Purpose |
@@ -76,7 +88,9 @@ Suggested squad split: **Member 1** React UI, **Member 2** FastAPI and SQLite, *
 seatiq/
 ├── backend/
 │   ├── app/main.py       # API, persistence, seat lifecycle, seed data
-│   └── requirements.txt
+│   ├── requirements.txt
+│   ├── requirements-dev.txt
+│   └── tests/test_api.py
 ├── frontend/
 │   ├── index.html
 │   ├── app.js            # React UI
@@ -86,6 +100,7 @@ seatiq/
 ├── Dockerfile
 ├── start.bat
 ├── start-fast-demo.bat
+├── .github/workflows/ci.yml
 └── README.md
 ```
 
