@@ -79,7 +79,7 @@ seatiq/
 │   └── requirements.txt
 ├── frontend/
 │   ├── index.html
-│   ├── app.jsx           # React UI
+│   ├── app.js            # React UI
 │   └── styles.css
 ├── .env.example
 ├── .gitignore
