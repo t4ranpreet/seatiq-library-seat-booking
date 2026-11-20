@@ -18,7 +18,7 @@ SEATIQ is a hackathon-ready library seat reservation demo. It includes a React s
 
 ## Quick start
 
-Requirements: Python 3.10 or newer. On Windows, double-click `start.bat`; first startup creates an environment and installs the small Python dependency list.
+Requirements: Python 3.10 or newer. On Windows, double-click `start.bat`; first startup creates an environment and installs the small Python dependency list. Use `start-fast-demo.bat` to run a one-minute break timeout for the presentation.
 
 ```bash
 cd backend
@@ -56,7 +56,7 @@ The backend serves the included React UI from `frontend/`. The UI loads React, R
 2. **Hours 2–3 — UI:** adjust labels, colors, floor names, and seat layout in `frontend/`.
 3. **Hours 4–5 — API/data:** explain `backend/app/main.py`, inspect SQLite tables and API responses.
 4. **Hours 6–7 — Booking/check-in:** walk through a reservation and the seat token check-in flow.
-5. **Hours 8–9 — Break lifecycle:** set `BREAK_MINUTES=1` for a short demo; let the server release a seat after expiry.
+5. **Hours 8–9 — Break lifecycle:** run `start-fast-demo.bat` for a short timeout demo; let the server release a seat after expiry.
 6. **Hours 10–11 — Integration:** use two browser sessions to show that a seat cannot be reserved twice; check the admin occupancy view.
 7. **Hour 12 — Presentation:** restore demo data and use the talk track below.
 
@@ -67,7 +67,7 @@ Suggested squad split: **Member 1** React UI, **Member 2** FastAPI and SQLite, *
 1. Show the public floor directory and live availability.
 2. Sign in as `Demo Student`, reserve an available seat, and show the seat change state.
 3. Check in using the displayed token and show the occupied pass.
-4. Start a break. Explain the 20-minute deadline; for a live timeout, set `BREAK_MINUTES=1` and restart the server.
+4. Start a break. Explain the 20-minute deadline; for a live timeout, start the app with `start-fast-demo.bat`.
 5. Open Admin view to show seat occupancy and the recent activity feed.
 
 ## Project structure
@@ -84,6 +84,8 @@ seatiq/
 ├── .env.example
 ├── .gitignore
 ├── Dockerfile
+├── start.bat
+├── start-fast-demo.bat
 └── README.md
 ```
 
@@ -100,7 +102,7 @@ seatiq/
 - [ ] Confirm Python and install dependencies.
 - [ ] Start the server and open the interactive API docs.
 - [ ] Run the student booking → check-in → break → return demo.
-- [ ] Run the timeout demo with `BREAK_MINUTES=1`.
+- [ ] Run the timeout demo with `start-fast-demo.bat`.
 - [ ] Review admin view and reset seed data before judging.
 - [ ] Keep personal data out of screenshots, demo input, and repository history.
 
