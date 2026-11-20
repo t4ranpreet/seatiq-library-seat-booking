@@ -31,7 +31,7 @@ uvicorn app.main:app --reload
 
 Open <http://127.0.0.1:8000>. The API reference is at <http://127.0.0.1:8000/docs>.
 
-The backend serves the included React UI from `frontend/`. The UI uses React and ReactDOM from the public `esm.sh` CDN; an internet connection is needed to load those two runtime modules. The API and demo data remain local.
+The backend serves the included React UI from `frontend/`. The UI loads React, ReactDOM, a QR image generator, and display fonts from public CDNs; an internet connection is needed for those assets. API calls and demo data remain local.
 
 ## API overview
 
