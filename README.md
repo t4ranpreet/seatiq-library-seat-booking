@@ -35,6 +35,10 @@ Open <http://127.0.0.1:8000>. The API reference is at <http://127.0.0.1:8000/doc
 
 The backend serves the included React UI from `frontend/`. The UI loads React, ReactDOM, a QR image generator, and display fonts from public CDNs; an internet connection is needed for those assets. API calls and demo data remain local.
 
+## Hosting the demo
+
+The repository includes `render.yaml` for a free Render web service. In Render, create a **New Blueprint** from this repository and deploy `seatiq-demo`; the service health check uses `/api/health`. The free demo uses temporary SQLite storage, so reservations may reset after a service restart or redeploy. This setup is for judging and prototype use only.
+
 ## Checks
 
 GitHub Actions runs the API lifecycle tests on pushes and pull requests. To run them locally after dependencies are installed:
@@ -100,6 +104,7 @@ seatiq/
 ├── .env.example
 ├── .gitignore
 ├── Dockerfile
+├── render.yaml
 ├── start.bat
 ├── start-fast-demo.bat
 ├── .github/workflows/ci.yml
