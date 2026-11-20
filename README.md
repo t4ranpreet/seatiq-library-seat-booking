@@ -2,6 +2,8 @@
 
 **Find a seat. Check in. Study without the guesswork.**
 
+[![SEATIQ checks](https://github.com/t4ranpreet/seatiq-library-seat-booking/actions/workflows/ci.yml/badge.svg)](https://github.com/t4ranpreet/seatiq-library-seat-booking/actions/workflows/ci.yml)
+
 SEATIQ is a hackathon-ready library seat reservation demo. It includes a React student experience, a FastAPI backend, SQLite persistence, QR-style check-in, a 20-minute break with server-side auto-release, and an admin occupancy view.
 
 ## Demo highlights
